@@ -1,0 +1,22 @@
+o que é Markdown
+"text.md"
+
+markdown é uma forma mais simplista de se escrever em html, voltado para formatação de
+texto.
+ 
+invés de usar de h1 a h6, os titulos são dados de outras formas
+# sou h1
+## sou h2
+### sou h3
+e assim por diante
+
+**negrito**
+_italico_
+há como usar emojis. :nome_emoji
+criar uma li no md: " - " + string
+
+markdown sempre vem acompanhado de um manual que fala de forma completa todos os  tipos
+de formatação que estão disposiveis para uso.
+
+a partir do momento que é apertado "enter", já vai ser executado a formatação que foi
+definida.

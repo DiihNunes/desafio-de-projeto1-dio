@@ -1,0 +1,30 @@
+Como o git funciona por baixo dos panos???
+distinção de arquivo e como é reconhecida as versões.
+
+sha1 é uma encriptação que gera um conjunto de 40 caracteres.
+essa chave gerada pelo sha1 é usada  como forma de distinção de arquivos.
+
+essa chave não se mantem a mesma para o mesmo arquivo.
+toda vez que você salva o arquivo com alguma modificação essa chave é gerada,
+assim, o git distingue quando há uma diferença de versão nas pastas upadas nele.
+também é assim que ele salva as versões anteriores do projeto e as  guarda.
+
+como checar a chave de um arquivo?
+no git bash: openssl sha1 arquivo.txt
+
+blobs, trees e commites.
+blobs se refere apenas ao conteúdo que está no arquivo.
+trees se referem apenas a estrutura de armazenamento de dados, muito similar ao sistema
+de arquivos UNIX, que permite o armazenamento de pastas e seus conteúdos identificados
+por uma sha1
+
+ao mudar um arquivo e gerar uma nova sha1, o sha1 da tree tbm muda.
+
+commit é como se fosse o histórico dos arquivos que foram armazenados no git. contendo 
+quem fez o commit e qual versão foi colocada lá
+a forma que é usada para especificar quem fez o commit é atravez do email, ou seja, sua
+conta no github, além que vai ser requerido a senha.
+commit também possuem sha1, ou seja, se mudar uma blob, sera mudada as sha's da tree e
+so commit
+
+commit > tree > blob

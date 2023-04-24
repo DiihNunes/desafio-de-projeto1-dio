@@ -1,0 +1,30 @@
+resolvendo problemas no git.
+
+situação: o que acontece se duas pessoas estão editando o mesmo codígo??
+
+pessoa1 e pessoa2: abrem o arquivo juntas e começam a trabalhar nele.
+
+a pessoa 2 faz um push, mas, a pessoa1 ainda está trabalhando e não viu a mudança de ver
+são.
+
+quando a pessoa1 fazer o push, será exibido em tela que o codígo dela está desatualizado
+e que é necessario puxar a versão atual do codígo para que o push seja feito.
+
+caso a pessoa1 e a pessoa2 tenham editado a mesma linha, ocorre o erro de merge.
+o  erro consiste no fato que ele não vai saber juntar os dois codígos porque a mesma li
+nha foi editada pelos os dois usuarios.
+
+resolução do git: o arquivo o qual está em conflito será aberto e o mesmo terá que ser
+editado por você, fazendo que o usuário mesmo faça a versão difinitiva.
+
+no documento que você precisa editar:
+"=======" a partir desses simbulos, indica o que estava na versão do git
+">>>>>>>" é a forma de atribuir comentarios no md
+
+após a compreensão do problema, você pode tranquilamente editar o arquivo, fazendo sua
+versão atualizada.
+
+ao dar git status, será exibido que ainda ocorreu um erro de merge. com o arquivo já
+editado em mãos, é possivél fazer o push e commit tranquilamente.
+
+prontinho, problema resolvido.

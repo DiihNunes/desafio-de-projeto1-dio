@@ -1,0 +1,27 @@
+ciclo de vida dos arquivos.
+
+há dois tipos de arquivos, os "untracked" e os "tracked", ou seja, tem os arquivos que o
+git tem rastreio e os quais ele não tem.
+dentro dos tracked, existe os unmodified, os modified e os staged.
+
+unmodified = os que não foram editados, permanecem na mesma versão que chegaram.
+modified = os arquivos que foram editados ou subscrevidos com modificações.
+staged = é um estado de preparo para ser commitado, após isso, o arquivo volta a ser
+unmodified.
+
+o staged cria um snapshot. snapshot é como se  fosse uma imagem, uma copia do codígo no
+momento que foi commitado.
+
+ambiente de desenvolvimento                     servidor
+working directory > staging area > local repo > remote repo
+               git add        git commit -m
+
+conforme você trabalha com os arquivos em sua maquina, ele fica constantemente alternando
+entre working directory e staging area. A partir do momento em que é feito o git add, aí
+sim os arquivos vão para local repo, configurado com o git init, e então quanto os
+arquivos são commitados eles vão para o servidor.
+
+o repositorio local é composto puramente de commits.
+
+caso tenha commit de um usuario que não tenha  conta no git, no historico de commits não
+havera nenhuma foto ou email, sera exibido apenas o name de quem fez o commit

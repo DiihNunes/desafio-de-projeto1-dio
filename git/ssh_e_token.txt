@@ -1,0 +1,47 @@
+formas unicas de identificação de usuario:
+Chave SSH e Token
+
+em resumo, chave ssh é uma forma segura de tem conexão com duas maquinas distintas. Basi
+camente é como se nós falassemos pro github que nossa maquina é sim confiavel para seus
+serviços. Na pratica, chave ssh é como se fosse uma assinatura da sua maquina, uma vez
+tendo essa chave, não ira ser necessario logar com email e senha justamente porque o git
+reconhece sua maquina.
+
+*criando uma chave ssh*
+no gitbash, digite esses comados nessa ordem.
+ssh-keygen -t ed25519 -c seuemail@gmail.com
+("ed25519" é o tipo de criptografia  da sua chave)
+
+após isso será printado na tela aonde essa chave ira morar no seu pc. Há como editar
+o caminho da chave que vai ser inserida na sua  maquina.
+
+após acessar a pasta do codigo .pub e ver o codigo que está dentro dela. copie e jogue-a
+no campo key. Clique em add ssh key.
+
+vá ao git bash novamente e entre na pasta que esta o ssh.
+eval $(ssh-agent -s) 
+(gerando um processo em sua maquina, nas  treds, mais especificamente)
+
+ssh-add id_chave_ssh_privada
+(toda a vez que chegar um codigo do git, sua chave sera usada como forma  de descriptogra
+far o que for mandado, essa é a função do agente e porque passar a key para ele)
+
+uma vez  que haver uma chave ssh em sua maquina, não será posspivel usar git_clone atra
+vez do link do repositorio, podera apenas ser realizado com o token ssh do repositorio
+
+esse metodo é geralmente usado para clonar repositorios privados.
+
+caso aja duvidas  perante criar uma chave ssh, tem a documentação oficial do git falando
+sobre isso tudo.
+
+*criando um token*
+developer settings > personal acess token
+
+primeiro passo é definir uma data de expiração para esse token.
+selecionar "repo" nos escopos.
+não esqueça de atribuir um nome ao pedido de criar um token.
+
+copie o token de acesso e o guarde em um lugar seguro. O proprio git avisa o usuário que
+o token não podera ser visto novamente.
+
+usando token, é possivel clonar repositorio usando http
